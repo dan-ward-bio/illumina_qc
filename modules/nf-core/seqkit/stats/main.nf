@@ -5,7 +5,7 @@ process SEQKIT_STATS {
     conda "${moduleDir}/environment.yml"
     container "${workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container
         ? 'https://depot.galaxyproject.org/singularity/seqkit:2.9.0--h9ee0642_0'
-        : 'biocontainers/seqkit:2.9.0--h9ee0642_0'}"
+        : 'community.wave.seqera.io/library/fastp_fastqc_fq_multiqc_seqkit:35a4802c35df68db'}"
 
     input:
     tuple val(meta), path(reads)
