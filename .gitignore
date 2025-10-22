@@ -6,3 +6,4 @@ test_datasets/SE/*
 .nf-test.log
 .readme*
 readme.html
+.nextflow*
