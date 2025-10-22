@@ -33,11 +33,13 @@ chmod +x download_test_data.sh
 bash download_test_data.sh
 ```
 
-To run the workflow on the downloaded test paired-end dataset, use the following command:
-**With docker (Apple Silicon (ARM)):**
-```
-nextflow run main.nf --dir test_datasets/PE --pe --batch 1 -profile docker```
+To run the workflow on the downloaded test paired-end datasetd:
 
+**With docker (Apple Silicon (ARM)):**
+
+```
+nextflow run main.nf --dir test_datasets/PE --pe --batch 1 -profile docker
+```
 **With conda:**
 ```
 nextflow run main.nf --dir test_datasets/PE --pe --batch test_batch -profile conda
