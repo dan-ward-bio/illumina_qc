@@ -36,7 +36,6 @@ To run the workflow on the downloaded test paired-end dataset, use the following
 
 ```
 nextflow run main.nf --dir test_datasets/PE --pe --batch test_batch
-
 ```
 
 To run the full batch of end-to-end tests using nf-test, use the following command:
