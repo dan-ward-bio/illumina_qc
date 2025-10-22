@@ -40,7 +40,7 @@ To run the full batch of end-to-end tests using nf-test, use the following comma
 ## Usage parameters
 
 ```
-nextflow run main.nf --dir test_datasets/PE --pe --batch test_batch 
+nextflow run main.nf --dir test_datasets/PE --pe --batch test_batch --fastq_pattern '{R1,R2}' 
 
 --dir {directory with FASTQ files} 
 --pe {set for paired-end data, omit for single-end}
