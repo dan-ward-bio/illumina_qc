@@ -24,7 +24,7 @@ Download the workflow:
 Currently there is not support for ```nextflow pull``` functionality. The repo must be cloned and the workflow launched from the local directory.
 
 ```
-git clone -b dev https://github.com/dan-ward-bio/illumina_qc.git
+git clone https://github.com/dan-ward-bio/illumina_qc.git
 cd illumina_qc
 ```
 
