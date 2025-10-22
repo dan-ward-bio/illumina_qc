@@ -34,11 +34,16 @@ bash download_test_data.sh
 
 To run the workflow on the downloaded test paired-end dataset, use the following command:
 
-```nextflow run main.nf --dir test_datasets/PE --pe --batch test_batch```
+```
+nextflow run main.nf --dir test_datasets/PE --pe --batch test_batch
+
+```
 
 To run the full batch of end-to-end tests using nf-test, use the following command:
 
-```nf-test test tests/main.nf.test ```
+```
+nf-test test tests/main.nf.test
+```
 
 ## Usage parameters
 
