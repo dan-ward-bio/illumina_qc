@@ -5,12 +5,6 @@ nextflow_pipeline {
     name "Test Workflow main.nf"
     script "main.nf"
 
-    setup {
-        run("Download test data") {
-            script "bash ${projectDir}/download_test_data.sh"
-        }
-    }
-
 // Main PE workflow
 
     test("Illumina PE test - should run without failures") {
