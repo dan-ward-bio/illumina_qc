@@ -1,0 +1,98 @@
+// nf-test configs - end-to-end only - haven't done unit tests due to time constraints
+
+nextflow_pipeline {
+
+    name "Test Workflow main.nf"
+    script "main.nf"
+
+// Main PE workflow
+
+    test("Illumina PE test - should run without failures") {
+
+        when {
+            params {
+                params.dir = "${projectDir}/test_datasets/PE"
+                params.pe = true
+                params.se = false
+                params.outdir = "./results"
+                params.fastq_pattern = "{R1,R2}"
+                params.batch = "test_pe_batch"
+            }
+        }
+
+        then {
+            assert workflow.success
+        }
+
+    }
+
+// Main SE workflow
+
+
+        test("Illumina SE test - should run without failures") {
+
+        when {
+            params {
+                params.dir = "${projectDir}/test_datasets/SE"
+                params.pe = false
+                params.se = true
+                params.outdir = "./results"
+                params.fastq_pattern = null
+                params.batch = "test_se_batch"
+            }
+        }
+
+        then {
+            assert workflow.success
+        }
+
+    }
+
+
+// Long read detection 
+
+
+        test("long read test - the workflow will crash") {
+
+        when {
+            params {
+                params.dir = "${projectDir}/test_datasets/longread"
+                params.pe = false
+                params.se = true
+                params.outdir = "./results"
+                params.fastq_pattern = null
+                params.batch = "test_longread_batch"
+            }
+        }
+
+        then {
+            assert workflow.failed
+            //assert workflow.errorReport.contains("This is most likely long-read data")
+        }
+
+    }
+
+// Read integrity check
+
+
+            test("Corrupted PE FASTQ - the workflow will crash") {
+
+        when {
+            params {
+                params.dir = "${projectDir}/test_datasets/PE_corrupted"
+                params.pe = false
+                params.se = true
+                params.outdir = "./results"
+                params.fastq_pattern = "{R1,R2}"
+                params.batch = "test_corrupted_batch"
+            }
+        }
+
+        then {
+            assert workflow.failed
+            //assert workflow.errorReport.contains("sequence-quality scores lengths mismatch")
+        }
+
+    }
+
+}
