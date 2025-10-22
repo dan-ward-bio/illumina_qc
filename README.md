@@ -9,6 +9,7 @@ This is a Nextflow pipeline for performing quality control (QC) on Illumina sequ
 ## Requirements (tested on)
 
 - Ubuntu 22.04.2 LTS x86_64
+- Mac OS Ventura 13.4.1 ARM64 (Use docker profile)
 - Nextflow 25.04.8.5956
 - nf-core/tools version 3.4.1
 - nf-test 0.9.0
@@ -33,9 +34,13 @@ bash download_test_data.sh
 ```
 
 To run the workflow on the downloaded test paired-end dataset, use the following command:
-
+**With docker (Apple Silicon (ARM)):**
 ```
-nextflow run main.nf --dir test_datasets/PE --pe --batch test_batch
+nextflow run main.nf --dir test_datasets/PE --pe --batch 1 -profile docker```
+
+**With conda:**
+```
+nextflow run main.nf --dir test_datasets/PE --pe --batch test_batch -profile conda
 ```
 
 To run the full batch of end-to-end tests using nf-test, use the following command:
