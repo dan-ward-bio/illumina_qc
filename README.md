@@ -37,7 +37,7 @@ bash download_test_data.sh
 
 **To run the workflow on the downloaded test paired-end dataset:**
 
-With docker (Apple Silicon (ARM)):
+With docker (Apple Silicon compatible):
 ```
 nextflow run main.nf --dir test_datasets/PE --pe --batch 1 -profile docker
 ```
