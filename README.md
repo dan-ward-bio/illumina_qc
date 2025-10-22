@@ -4,7 +4,7 @@
 
 This is a Nextflow pipeline for performing quality control (QC) on Illumina sequencing data. The pipeline ingests raw Illumina SE/PE FASTQ files from a specified directory, performs integrity checks, trimming, fastQC analysis (pre and post trimming) and aggragates the results into a multiQC report.
 
-![pipeline_diagram](img/illumina_qc_workflow_diagram.drawio.svg)
+![pipeline_diagram](img/illumina_qc_workflow_diagram.svg)
 
 ## Requirements (tested on)
 
