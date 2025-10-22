@@ -33,7 +33,7 @@ chmod +x download_test_data.sh
 bash download_test_data.sh
 ```
 
-**To run the workflow on the downloaded test paired-end datasetd:**
+**To run the workflow on the downloaded test paired-end dataset:**
 
 With docker (Apple Silicon (ARM)):
 ```
