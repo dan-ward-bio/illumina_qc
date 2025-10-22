@@ -9,7 +9,7 @@ This is a Nextflow pipeline for performing quality control (QC) on Illumina sequ
 ## Requirements (tested on)
 
 - Ubuntu 22.04.2 LTS x86_64
-- Mac OS Ventura 13.4.1 ARM64 (Use docker profile)
+- Mac OS Sequoia ARM64 (Use docker profile)
 - Nextflow 25.04.8.5956
 - nf-core/tools version 3.4.1
 - nf-test 0.9.0
@@ -20,6 +20,8 @@ This is a Nextflow pipeline for performing quality control (QC) on Illumina sequ
 ## Quick Start
 
 Download the workflow:
+
+Currently there is not support for ```nextflow pull``` functionality. The repo must be cloned and the workflow launched from the local directory.
 
 ```
 git clone -b dev https://github.com/dan-ward-bio/illumina_qc.git
@@ -58,7 +60,7 @@ nextflow run main.nf --dir test_datasets/PE --pe --batch test_batch --fastq_patt
 --dir {directory with FASTQ files} 
 --pe {set for paired-end data, omit for single-end}
 --se  {set for single-end data, omit for paired-end}
---batch {batch name}
+--batch {batch name} (Output results directory will be named according to batch)
 --fastq_pattern {suffix for FASTQ PE files in braces and single quotes} Default: '{R1,R2}'
 ```
 
@@ -80,6 +82,7 @@ nextflow run main.nf --dir test_datasets/PE --pe --batch test_batch --fastq_patt
 
 ## Limitations and upcoming features
 * Full unit testing not yet implemented.
+* Implement a fastQC trimming step before trimming.
 * Gracious handling of long read data not yet implemented.
 * Nextflow resource handling
 * Implementation in nf-core template/style guide.
