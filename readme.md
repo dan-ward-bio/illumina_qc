@@ -6,6 +6,16 @@ This is a Nextflow pipeline for performing quality control (QC) on Illumina sequ
 
 ![pipeline_diagram](img/illumina_qc_workflow_diagram.drawio.svg)
 
+## Requirements (tested on)
+
+- Ubuntu 22.04.2 LTS x86_64
+- Nextflow 25.04.8.5956
+- nf-core/tools version 3.4.1
+- nf-test 0.9.0
+- mamba 1.1.0
+- conda 23.3.1
+
+
 ## Quick Start
 
 ```nextflow run main.nf --dir test_datasets/PE --pe --batch test_batch```
