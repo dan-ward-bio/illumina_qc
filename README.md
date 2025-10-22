@@ -20,7 +20,7 @@ This is a Nextflow pipeline for performing quality control (QC) on Illumina sequ
 
 Download the workflow:
 
-```nextflow pull dan-ward-bio/illumina_qc```
+```git clone {repo URL}```
 
 Download the test datasets (from the workflow top directory):
 
