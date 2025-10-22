@@ -1,3 +1,13 @@
-Oct-22 19:55:51.738 [main] INFO  com.askimed.nf.test.App - nf-test 0.9.0
-Oct-22 19:55:51.756 [main] INFO  com.askimed.nf.test.App - Arguments: [version]
-Oct-22 19:55:52.953 [main] INFO  com.askimed.nf.test.App - Nextflow Version: 25.04.8
+Oct-22 20:22:04.410 [main] INFO  com.askimed.nf.test.App - nf-test 0.9.0
+Oct-22 20:22:04.428 [main] INFO  com.askimed.nf.test.App - Arguments: [test, tests/main.nf.test]
+Oct-22 20:22:05.572 [main] INFO  com.askimed.nf.test.App - Nextflow Version: 25.04.8
+Oct-22 20:22:05.576 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Load config from file /home/dan_cidr/github/illumina_qc-2/nf-test.config...
+Oct-22 20:22:06.037 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Loaded 21 files from directory /home/dan_cidr/github/illumina_qc-2 in 0.026 sec
+Oct-22 20:22:06.038 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Found 1 tests.
+Oct-22 20:22:06.039 [main] DEBUG com.askimed.nf.test.lang.dependencies.DependencyResolver - Found tests: [/home/dan_cidr/github/illumina_qc-2/tests/main.nf.test]
+Oct-22 20:22:06.039 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Detected 1 test files.
+Oct-22 20:22:06.234 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Started test plan
+Oct-22 20:22:06.234 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Workflow main.nf' from file '/home/dan_cidr/github/illumina_qc-2/tests/main.nf.test'.
+Oct-22 20:22:06.234 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '923ee0aa: Illumina PE test - should run without failures'. type: com.askimed.nf.test.lang.pipeline.PipelineTest
+Oct-22 20:24:22.648 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '923ee0aa: Illumina PE test - should run without failures' finished. status: PASSED
+Oct-22 20:24:22.651 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '688ab434: Illumina SE test - should run without failures'. type: com.askimed.nf.test.lang.pipeline.PipelineTest
