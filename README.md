@@ -19,7 +19,7 @@ This is a Nextflow pipeline for performing quality control (QC) on Illumina sequ
 
 ## Quick Start
 
-Download the workflow:
+**Download the workflow:**
 
 Currently there is not support for ```nextflow pull``` functionality. The repo must be cloned and the workflow launched from the local directory.
 
