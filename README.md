@@ -26,26 +26,25 @@ git clone -b dev https://github.com/dan-ward-bio/illumina_qc.git
 cd illumina_qc
 ```
 
-Download the test datasets (from the workflow top directory):
+**Download the test datasets (from the workflow top directory):**
 
 ```
 chmod +x download_test_data.sh
 bash download_test_data.sh
 ```
 
-To run the workflow on the downloaded test paired-end datasetd:
+**To run the workflow on the downloaded test paired-end datasetd:**
 
-**With docker (Apple Silicon (ARM)):**
-
+With docker (Apple Silicon (ARM)):
 ```
 nextflow run main.nf --dir test_datasets/PE --pe --batch 1 -profile docker
 ```
-**With conda:**
+With conda:
 ```
 nextflow run main.nf --dir test_datasets/PE --pe --batch test_batch -profile conda
 ```
 
-To run the full batch of end-to-end tests using nf-test, use the following command:
+**To run the full batch of end-to-end tests using nf-test, use the following command:**
 
 ```
 nf-test test tests/main.nf.test
