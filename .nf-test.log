@@ -1,13 +1,81 @@
-Oct-22 20:22:04.410 [main] INFO  com.askimed.nf.test.App - nf-test 0.9.0
-Oct-22 20:22:04.428 [main] INFO  com.askimed.nf.test.App - Arguments: [test, tests/main.nf.test]
-Oct-22 20:22:05.572 [main] INFO  com.askimed.nf.test.App - Nextflow Version: 25.04.8
-Oct-22 20:22:05.576 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Load config from file /home/dan_cidr/github/illumina_qc-2/nf-test.config...
-Oct-22 20:22:06.037 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Loaded 21 files from directory /home/dan_cidr/github/illumina_qc-2 in 0.026 sec
-Oct-22 20:22:06.038 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Found 1 tests.
-Oct-22 20:22:06.039 [main] DEBUG com.askimed.nf.test.lang.dependencies.DependencyResolver - Found tests: [/home/dan_cidr/github/illumina_qc-2/tests/main.nf.test]
-Oct-22 20:22:06.039 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Detected 1 test files.
-Oct-22 20:22:06.234 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Started test plan
-Oct-22 20:22:06.234 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Workflow main.nf' from file '/home/dan_cidr/github/illumina_qc-2/tests/main.nf.test'.
-Oct-22 20:22:06.234 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '923ee0aa: Illumina PE test - should run without failures'. type: com.askimed.nf.test.lang.pipeline.PipelineTest
-Oct-22 20:24:22.648 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '923ee0aa: Illumina PE test - should run without failures' finished. status: PASSED
-Oct-22 20:24:22.651 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '688ab434: Illumina SE test - should run without failures'. type: com.askimed.nf.test.lang.pipeline.PipelineTest
+Oct-22 21:02:30.917 [main] INFO  com.askimed.nf.test.App - nf-test 0.9.0
+Oct-22 21:02:30.935 [main] INFO  com.askimed.nf.test.App - Arguments: [test, tests/main.nf.test]
+Oct-22 21:02:32.062 [main] INFO  com.askimed.nf.test.App - Nextflow Version: 25.04.8
+Oct-22 21:02:32.066 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Load config from file /home/dan_cidr/github/illumina_qc-2/nf-test.config...
+Oct-22 21:02:33.774 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Loaded 21 files from directory /home/dan_cidr/github/illumina_qc-2 in 1.264 sec
+Oct-22 21:02:33.775 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Found 1 tests.
+Oct-22 21:02:33.776 [main] DEBUG com.askimed.nf.test.lang.dependencies.DependencyResolver - Found tests: [/home/dan_cidr/github/illumina_qc-2/tests/main.nf.test]
+Oct-22 21:02:33.776 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Detected 1 test files.
+Oct-22 21:02:33.952 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Started test plan
+Oct-22 21:02:33.952 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Workflow main.nf' from file '/home/dan_cidr/github/illumina_qc-2/tests/main.nf.test'.
+Oct-22 21:02:33.952 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '923ee0aa: Illumina PE test - should run without failures'. type: com.askimed.nf.test.lang.pipeline.PipelineTest
+Oct-22 21:02:40.558 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '923ee0aa: Illumina PE test - should run without failures' finished. status: FAILED
+org.codehaus.groovy.runtime.powerassert.PowerAssertionError: assert workflow.success
+       |        |
+       workflow false
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:432)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:670)
+	at main_nf$_run_closure1$_closure2$_closure7.doCall(main.nf.test:24)
+	at main_nf$_run_closure1$_closure2$_closure7.doCall(main.nf.test)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at com.askimed.nf.test.lang.TestCode.execute(TestCode.java:16)
+	at com.askimed.nf.test.lang.pipeline.PipelineTest.execute(PipelineTest.java:135)
+	at com.askimed.nf.test.core.TestExecutionEngine.execute(TestExecutionEngine.java:165)
+	at com.askimed.nf.test.commands.RunTestsCommand.execute(RunTestsCommand.java:299)
+	at com.askimed.nf.test.commands.AbstractCommand.call(AbstractCommand.java:43)
+	at com.askimed.nf.test.commands.AbstractCommand.call(AbstractCommand.java:18)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:1953)
+	at picocli.CommandLine.access$1300(CommandLine.java:145)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2352)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2346)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2311)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2179)
+	at picocli.CommandLine.execute(CommandLine.java:2078)
+	at com.askimed.nf.test.App.run(App.java:39)
+	at com.askimed.nf.test.App.main(App.java:46)
+Oct-22 21:02:40.562 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '688ab434: Illumina SE test - should run without failures'. type: com.askimed.nf.test.lang.pipeline.PipelineTest
+Oct-22 21:02:47.133 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '688ab434: Illumina SE test - should run without failures' finished. status: FAILED
+org.codehaus.groovy.runtime.powerassert.PowerAssertionError: assert workflow.success
+       |        |
+       workflow false
+	at org.codehaus.groovy.runtime.InvokerHelper.assertFailed(InvokerHelper.java:432)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.assertFailed(ScriptBytecodeAdapter.java:670)
+	at main_nf$_run_closure1$_closure3$_closure10.doCall(main.nf.test:46)
+	at main_nf$_run_closure1$_closure3$_closure10.doCall(main.nf.test)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1030)
+	at groovy.lang.Closure.call(Closure.java:427)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at com.askimed.nf.test.lang.TestCode.execute(TestCode.java:16)
+	at com.askimed.nf.test.lang.pipeline.PipelineTest.execute(PipelineTest.java:135)
+	at com.askimed.nf.test.core.TestExecutionEngine.execute(TestExecutionEngine.java:165)
+	at com.askimed.nf.test.commands.RunTestsCommand.execute(RunTestsCommand.java:299)
+	at com.askimed.nf.test.commands.AbstractCommand.call(AbstractCommand.java:43)
+	at com.askimed.nf.test.commands.AbstractCommand.call(AbstractCommand.java:18)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:1953)
+	at picocli.CommandLine.access$1300(CommandLine.java:145)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2352)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2346)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2311)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2179)
+	at picocli.CommandLine.execute(CommandLine.java:2078)
+	at com.askimed.nf.test.App.run(App.java:39)
+	at com.askimed.nf.test.App.main(App.java:46)
+Oct-22 21:02:47.135 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test 'd942b0b4: long read test - the workflow will crash'. type: com.askimed.nf.test.lang.pipeline.PipelineTest
+Oct-22 21:03:45.879 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test 'd942b0b4: long read test - the workflow will crash' finished. status: PASSED
+Oct-22 21:03:45.880 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '44dcb96c: Corrupted PE FASTQ - the workflow will crash'. type: com.askimed.nf.test.lang.pipeline.PipelineTest

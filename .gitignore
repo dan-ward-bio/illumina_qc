@@ -5,3 +5,4 @@ test_datasets/SE/*
 .nf-test
 .nf-test.log
 .readme*
+readme.html
